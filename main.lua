@@ -647,6 +647,9 @@ local function multiHeadAttentionBackward(doutSeq, cache, layer, heads, dModel, 
 	return grads
 end
 
+local Tokenizer = {}
+Tokenizer.__index = Tokenizer
+
 --Tokenizer
 function Tokenizer.new()
 	local self = setmetatable({}, Tokenizer)
